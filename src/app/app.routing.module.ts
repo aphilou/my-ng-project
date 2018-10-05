@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TableComponent } from './table/table.component';
 
 // Configuration static des routes
 const routes: Routes = [
@@ -10,6 +11,11 @@ const routes: Routes = [
   {
     path: 'dash', component: DashboardComponent, data: {
       appName: 'JLG Consulting',
+    }
+  },
+  {
+    path: 'table', component: TableComponent, data: {
+      title: 'My Table',
     }
   },
   { path: '**', redirectTo: '/' }
