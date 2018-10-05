@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, DoCheck } from '@angular/core';
+import { Component, OnInit, OnChanges, DoCheck, Input, Output, EventEmitter } from '@angular/core';
 
 const VISIBLE = 'visible';
 const HIDDEN = 'hidden';
@@ -8,26 +8,35 @@ const HIDDEN = 'hidden';
   templateUrl: './password-input.component.html',
   styleUrls: ['./password-input.component.css']
 })
-export class PasswordInputComponent implements OnInit, OnChanges, DoCheck {
+export class PasswordInputComponent implements OnInit, DoCheck {
 
   state = HIDDEN;
-  myPassword: string;
+  internalPassword: string;
+
+  // Important le suffix Change caractérise l'évnement sur l'attribut password
+  @Output() passwordChange = new EventEmitter();
+
+  @Input() get password() {
+    return this.internalPassword;
+  }
+
+  set password(val) {
+    this.internalPassword = val;
+    this.passwordChange.emit(this.internalPassword);
+  }
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  ngOnChanges() {
-    console.log('onChange');
+    console.log('PasswordInpuctComponent init');
   }
 
   ngDoCheck() {
-    console.log('myPassword', this.myPassword);
+    console.log('PasswordInpuctComponent check', 'internalPassword', this.internalPassword);
   }
 
   toggle() {
-    console.log('myPassword', this.myPassword);
+    console.log('myPassword', this.internalPassword);
     if (this.state === HIDDEN) {
       this.state = VISIBLE;
     } else {
