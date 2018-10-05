@@ -19,6 +19,11 @@ $ ng g c body
 $ ng g c footer
 $ ng g c password-input
 ```
+
+## Add the use of Angular Materials
+
+Run `ng add @angular/material` will update your Angular project with the correct dependencies, perform configuration changes and execute initialization code.  
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
