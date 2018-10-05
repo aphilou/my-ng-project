@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AppRoutingModule } from './app.routing.module';
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
@@ -42,7 +44,7 @@ library.add(faEyeSlash);
     DashboardComponent
   ],
   imports: [
-    BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule, 
+    BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule, AppRoutingModule,
     MatIconModule, MatCheckboxModule, MatMenuModule, MatToolbarModule, LayoutModule, MatButtonModule, MatSidenavModule, MatListModule, MatGridListModule, MatCardModule
   ],
   providers: [],
