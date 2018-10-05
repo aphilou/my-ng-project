@@ -14,7 +14,7 @@ describe('PasswordInputComponent', () => {
     .compileComponents();
   }));
 
-  // Instancié le composa,t
+  // Instancié le composant
   beforeEach(() => {
     fixture = TestBed.createComponent(PasswordInputComponent);
     component = fixture.componentInstance;
