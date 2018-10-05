@@ -15,8 +15,11 @@ import { PasswordInputComponent } from './password-input/password-input.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule, MatSidenavModule, MatListModule } from '@angular/material';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { NavigationComponent } from './navigation/navigation.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 // Add an icon to the library for convenient access in other components
 library.add(faCoffee);
@@ -34,7 +37,7 @@ library.add(faEyeSlash);
   ],
   imports: [
     BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule, 
-    BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule
+    MatIconModule, MatCheckboxModule, MatMenuModule, MatToolbarModule, LayoutModule, MatButtonModule, MatSidenavModule, MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
