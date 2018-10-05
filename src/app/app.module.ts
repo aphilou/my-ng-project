@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { PasswordInputComponent } from './password-input/password-input.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Add an icon to the library for convenient access in other components
 library.add(faCoffee);
@@ -27,7 +28,7 @@ library.add(faEyeSlash);
     PasswordInputComponent
   ],
   imports: [
-    BrowserModule, FormsModule, FontAwesomeModule
+    BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
