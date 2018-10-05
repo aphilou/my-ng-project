@@ -44,3 +44,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     npm install @fortawesome/free-solid-svg-icons
     npm install @fortawesome/angular-fontawesome
     ```
+
+- Tests Unitaires
+    - [Karma](http://karma-runner.github.io/2.0/index.html)
+        - Les test se lancent par
+        ```bash
+        npm test        
+        ```
+
+- Tests d'Intégration
+    - [Protactor](https://www.protractortest.org/#/)
+        - Les test se lancent par
+        ```bash
+        npm e2e        
+        ```
