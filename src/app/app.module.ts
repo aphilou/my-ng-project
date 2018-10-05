@@ -20,6 +20,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MenuComponent } from './menu/menu.component';
+import { HomeComponent } from './home/home.component';
 
 // Add an icon to the library for convenient access in other components
 library.add(faCoffee);
@@ -33,7 +35,9 @@ library.add(faEyeSlash);
     BodyComponent,
     FooterComponent,
     PasswordInputComponent,
-    NavigationComponent
+    NavigationComponent,
+    MenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule, 
