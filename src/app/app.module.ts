@@ -15,13 +15,14 @@ import { PasswordInputComponent } from './password-input/password-input.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule, MatSidenavModule, MatListModule } from '@angular/material';
+import { MatCheckboxModule, MatSidenavModule, MatListModule, MatGridListModule, MatCardModule } from '@angular/material';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 // Add an icon to the library for convenient access in other components
 library.add(faCoffee);
@@ -37,11 +38,12 @@ library.add(faEyeSlash);
     PasswordInputComponent,
     NavigationComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule, 
-    MatIconModule, MatCheckboxModule, MatMenuModule, MatToolbarModule, LayoutModule, MatButtonModule, MatSidenavModule, MatListModule
+    MatIconModule, MatCheckboxModule, MatMenuModule, MatToolbarModule, LayoutModule, MatButtonModule, MatSidenavModule, MatListModule, MatGridListModule, MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
