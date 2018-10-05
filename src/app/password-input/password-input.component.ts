@@ -1,4 +1,5 @@
 import { Component, OnInit, OnChanges, DoCheck, Input, Output, EventEmitter } from '@angular/core';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 const VISIBLE = 'visible';
 const HIDDEN = 'hidden';
@@ -10,6 +11,7 @@ const HIDDEN = 'hidden';
 })
 export class PasswordInputComponent implements OnInit, DoCheck {
 
+  faCoffee = faCoffee;
   state = HIDDEN;
   internalPassword: string;
 
