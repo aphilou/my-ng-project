@@ -13,6 +13,10 @@ import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { PasswordInputComponent } from './password-input/password-input.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 // Add an icon to the library for convenient access in other components
 library.add(faCoffee);
@@ -25,9 +29,11 @@ library.add(faEyeSlash);
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    PasswordInputComponent
+    PasswordInputComponent,
+    NavigationComponent
   ],
   imports: [
+    BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule, 
     BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule
   ],
   providers: [],
