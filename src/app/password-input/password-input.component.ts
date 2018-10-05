@@ -1,7 +1,7 @@
 import { Component, OnInit, OnChanges, DoCheck, Input, Output, EventEmitter } from '@angular/core';
 
-const VISIBLE = 'visible';
-const HIDDEN = 'hidden';
+export const VISIBLE = 'visible';
+export const HIDDEN = 'hidden';
 
 @Component({
   selector: 'app-password-input',
