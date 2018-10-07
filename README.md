@@ -31,6 +31,12 @@ For instance for current poject:
 ```bash
 $ ng build --base-href=/my-ng-project/ --prod --output-path=../exo/my-ng-project
 ```
+Another interesting cli tool to deploy build path to the github hosting environment
+```bash
+$ npm i -g angular-cli-ghpages
+$ ng build --base-href="https://aphilou.github.io/my-ng-project/" --prod 
+$ angular-cli-ghpages
+```
 
 ## Running unit tests
 
