@@ -32,13 +32,16 @@ export class ConfigHistoDataSource implements DataSource<ConfigHisto> {
 
         this.configsService.findConfigs(termId, filter, sortDirection,
             pageIndex, pageSize).pipe(
-                catchError(() => of([])),
+                catchError((error) => {
+                    console.error('findConfigs error:', error);
+                    return of([])
+                }),
                 finalize(() => this.loadingSubject.next(false))
             )
             .subscribe(configs => {
                 console.log("configHisto = ", configs);
-                this.totalElements = configs.totalElements;
-                this.totalPages = configs.totalPages;
+                this.totalElements = (configs.totalElements ? configs.totalElements : 0);
+                this.totalPages = (configs.totalPages ? configs.totalPages : 0);
                 this.configHistoSubject.next(configs.items);
             });
 
