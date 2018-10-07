@@ -17,7 +17,8 @@ import { PasswordInputComponent } from './password-input/password-input.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule, MatSidenavModule, MatListModule, MatGridListModule, MatCardModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MatCheckboxModule, MatSidenavModule, MatListModule, MatGridListModule, MatCardModule, MatTableModule, 
+         MatPaginatorModule, MatSortModule, MatProgressSpinnerModule } from '@angular/material';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -26,6 +27,8 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableComponent } from './table/table.component';
+import { ConfigsService } from './services/configs.service';
+import { HttpClientModule } from '@angular/common/http';
 
 // Add an icon to the library for convenient access in other components
 library.add(faCoffee);
@@ -46,10 +49,11 @@ library.add(faEyeSlash);
     TableComponent
   ],
   imports: [
-    BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule, AppRoutingModule,
-    MatIconModule, MatCheckboxModule, MatMenuModule, MatToolbarModule, LayoutModule, MatButtonModule, MatSidenavModule, MatListModule, MatGridListModule, MatCardModule, MatTableModule, MatPaginatorModule, MatSortModule
+    BrowserModule, FormsModule, FontAwesomeModule, BrowserAnimationsModule, AppRoutingModule, HttpClientModule,
+    MatIconModule, MatCheckboxModule, MatMenuModule, MatToolbarModule, LayoutModule, MatButtonModule, MatProgressSpinnerModule,
+    MatSidenavModule, MatListModule, MatGridListModule, MatCardModule, MatTableModule, MatPaginatorModule, MatSortModule
   ],
-  providers: [],
+  providers: [ConfigsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
